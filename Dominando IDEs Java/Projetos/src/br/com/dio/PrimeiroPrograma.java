@@ -11,6 +11,11 @@ public class PrimeiroPrograma {
 		System.out.println(gato);
 		System.out.println("Sera que e isso mesmo!!!");
 		System.out.println("Teste do ctrl + espaço");
+		float a=7;
+		int b=2;
+		float div;
+		div=a/b;
+		System.out.println(div);
 	
 	}
 
