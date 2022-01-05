@@ -1,8 +1,8 @@
-## Introdução a criação de websites com HTML5 e CSS3
+# Introdução a criação de websites com HTML5 e CSS3
 
 - Todo arquivo/documento HTML é formado por elementos:
 
-  ```
+  ```html
    abertura da tag
   _________|________
   |                 |
@@ -19,7 +19,7 @@
 
 - Estrutura básica de uma página HTML:
 
-  ````
+  ````html
   <!DOCTYPE html>  (indica ao navegador que o arquivo e do tipo html)
   <html>
   	<head>
@@ -74,7 +74,7 @@ Eles não foram criados na versão 5 do HTML e nem são específicos para semân
 
   - href ->representa um hiperlink para a página, que pode levar para outra página ou site, email e telefone. Para tel e email devemos usar os prefixos tel e mailto respectivamente. 
 
-    ````
+    ````html
     	EX.:  <a href="link site">nome do site</a>
     		  <a href="mailto:email@gmail.com">email@gmail.com</a>
     ````
@@ -83,9 +83,95 @@ Eles não foram criados na versão 5 do HTML e nem são específicos para semân
 
   - target -> abre link da página em outra aba do navegador. 
 
+- "<img>" utilizado para inserção de imagem. Possui dois atributos:
+
+  - src -> define o caminho onde está armazenado a figura
+
+  - alt -> define uma descrição para a imagem que será exibida se a imagem não carregar e que será lida caso se use um leitor de tela.
+
+    ````html
+    <img src="img/imagem.jpg" alt="imagem">
+
+- listas
+
+  - "<ul>" utilizado para iniciar uma lista não ordenada
+
+  - "<ol>"utilizado para iniciar uma lista ordenada
+
+  - "<li>" utilizado para inserir cada item da lista
+
+    ````html
+    <ul>
+    	<li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    
+    <ol>
+        <li>item 1</li>
+        <li>item2</li>
+    </ol>
 
 
 
+## CSS 3
+
+Regra CSS:
+
+````html
+<!-- Seletores -> elementos html (tag)-->
+ ___|_____
+ |        |
+ a,p,h1,h3{
+	color: blue;
+	font-size: 14px;
+}  |_________________|
+            |
+    <!-- Declarações-> formadas por uma propriedade e um valor-->  
+    <!-- Neste código todas as tags do site terão as mesmas características-->
+````
+
+Para que possamos personalizar cada item da página usaremos o "id" e a "class" , pois eles podem ser atribuídos a qualquer elemento de forma específica.
+
+- id -> no html declara se o "id" como id e no CSS pelo hash ( # ), só pode ser usado uma vez na página.
+
+  ````html
+  #header{
+  color : blue;
+  }
+
+- class (classes) -> no html declara se a "class" como class e no CSS por um ponto     ( . )  
+
+  ````html
+  .header{
+  color: blue;
+  }
+
+Para utilizarmos o CSS na página criamos um arquivo .CSS por padrão nomeia se o arquivo como style.css.
+
+No head do arquivo html indicamos a utilização do arquivo CSS:
+
+````html
+<link rel="stylesheet" href="caminho do arquivo.css"
+````
+
+- rel -> indica ao navegador qual tipo de arquivo está adicionando a página html (css -> stylesheet)
+-  href-> indica o caminho do arquivo.css
+
+No elemento que se pretende mudar a característica inserimos a classe ou o id:
+
+````html
+<h1 id="header">
+    Título Principal
+</h1>
+````
 
 
 
+## Links úteis
+
+- <a href="https://tinypng.com/">Tynipng</a>
+  - O Tinypng faz compactação de arquivos de imagem reduzindo seu tamanho fazendo com que sejam carregados mais rapidamente nas páginas web.
+
+- <a href="https://unsplash.com/">Unsplash</a>
+  - Site para baixar imagens gratuitas.
