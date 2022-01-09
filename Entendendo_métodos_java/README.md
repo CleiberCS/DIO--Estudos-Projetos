@@ -37,6 +37,23 @@ Assinatura de um método é definida pelo seu nome mais o parâmetro. Exemplo:
 ````java
 public double consultarSaldo(int id){}
 consultarSaldo(12345);//assinatura do método
-
 ````
 
+Obs.: uma boa prática é criar método que tenha até 80 e 120 linhas.
+
+## Sobrecarga
+
+É a capacidade de criar métodos com o mesmo nome para contextos diferentes,mas com assinaturas diferentes. Exemplo de sobrecarga:
+
+````java
+void converteInteiro(float f){}
+void converteInteiro(double d){}
+````
+
+Obs.: isto é possível pois a  **assinatura do método**=**nome do método **+ **parâmetros** e uma vez que temos parâmetros diferentes logo temos assinaturas diferentes o que impede que haja conflito e assim tem se a **sobrecarga**.
+
+## Retornos (return)
+
+É o valor/dado que o método retorna após executar seu código(processar),ou seja, é a resposta do método a solicitação.
+
+O return é um elemento que interrompe a execução do método.

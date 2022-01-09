@@ -166,12 +166,175 @@ No elemento que se pretende mudar a característica inserimos a classe ou o id:
 </h1>
 ````
 
+- Box model -> o navegador representa cada elemento html como uma caixa retangular. Essa caixa é composta por 4 áreas: o conteúdo, o padding, a borda e a margem.
+
+  ![alt text](D:\WorkSpace\DIO-Estudos&Projetos\Introdução a criação de websites com HTML5 e CSS3\box_model.png)
+
+  - margin ->espaço entre elementos
+  - border -> contorno em volta do padding
+  - padding ->espaço entre a borda e o conteudo(content)
+  - content -> um texto, uma imagem,um video
+
+- Propriedades do padding e margin:
+
+  - pode se dar um único valor para todos os lados:
+
+    ````css
+    .class{
+     	padding: 15pX
+        margin:10px;   
+    }
+    ````
+
+  - pode se dar valores conjuntos da seguite forma lado superior/inferior e lado direito/esquerdo
+
+    ````css
+    .class{
+        padding:20 px 10px;
+        margin:5px 8px;
+    }
+    ````
+
+  - pode também dar valor individual aos lados seguindo a seguinte ordem(superior - direito - inferior - esquerdo)
+
+    ````css
+    .class{
+    	padding: 5px 10px 5px 10px;
+    	margin: 10px 10px 10px 5px;
+    }
+    ````
+
+  - outra forma de usar é utilizando as propriedades
+
+    ````css
+    .class{
+    	padding-top:15px;
+        padding-right:10px;
+        padding-bottom:5px;
+        padding-left:0;
+    }
+    ````
+
+​			Obs.: para zerar os valores de padding ou margim basta usar:
+
+````css
+.class{
+	margin:0;
+}
+````
+
+- Border
+
+  Possui tres configurações largura, cor e estilo(tipo da linha). Pode  se estilizada
+
+  ````css
+  .class{
+      border:3px solid blue;
+      border-top:5px dotted green;
+  }
+
+​		No exemplo adotamos primeiro um padrao e na borda superior demos um estilo 		diferente.
+
+​		Border-radius ->arredonda os cantos e caso queira tornar um circulo basta setar   		para  50%	 
+
+- Alteração de fonte
+
+  - tipo de fonte
+
+    ````css
+    .class{
+    	font-family:Verdana,Arial <!--foi usado duas fontes pois se 								a primeira falhar o navegador 									carrega a segunda-->
+    }
+
+  - tamanho do texto
+
+    ````css
+    #id{
+    font-size:15px;
+    }
+
+  - Estilo de texto
+
+    ````css
+    .class{
+        font-style:italic;
+    }
+
+  - Estilo bold da peso a fonte:
+
+  ````css
+  .class{
+  font-weight:bold;<!--negrito-->
+  }
+  ````
+
+  - text -transform altera o texto entre maiusculo e minusculo 
+
+    - uppercase-> todo o texto em maiusculo
+
+      ````css
+      text-transform:uppercase;
+
+    - lowercase->todo o texto em minusculo
+
+      ````css
+      text-transform:lowercase;
+
+    - capitalize -> a primeira letra maiuscula
+
+      ````css
+      text-transform:capitalize;
+
+  - text-decoration serve para colocar uma linha no texto
+
+    - undeline->linha abaixo do texto
+
+    - overline->linha acima do texto
+
+    - line-through->linha no meio da palavra
+
+      ````css
+      text-decoration:overline;
+      ````
+
+- listas
+  - list-style-type-> altera o marcador da lista
+    - square -marcador quadrado 
+    - upper-roman ->numeros romanos maiusculos
+    - "\1F44D" -> mostra um joinha
+  - list-style-image:url("caminho da imagem"); -> altera o marcador para uma imagem escolhida.
+
+Obs.: O CSS funciona em cascata logo se temos:
+
+````html
+<ul class="lista">
+    <li>
+        <a>...</a>
+    </li>
+</ul>
+
+.lista{
+list-style-type:square;
+}
+.lista li a{
+	color:green; <!--altera a cor da ancora-->
+}
+````
+
+- Dimensão e alinhamento
+  - width e height -> indicam qual é a largura e a altura do elemento respectivamente, a medida pode ser em pixel ou %.
+  - Max-width e Max-height -> indica a largura e altura máxima que o elemento pode ter e  ele pode se auto-ajustar de acordo com a situação.
+  - margin: auto -> com esse parametro ele ajusta automaticamente o elemento ao centro.
+
 
 
 ## Links úteis
 
 - <a href="https://tinypng.com/">Tynipng</a>
   - O Tinypng faz compactação de arquivos de imagem reduzindo seu tamanho fazendo com que sejam carregados mais rapidamente nas páginas web.
-
 - <a href="https://unsplash.com/">Unsplash</a>
   - Site para baixar imagens gratuitas.
+
+- <a href=https://developer.mozilla.org/pt-BR/>MDN Mozila Develop</a>
+  - Site com material de aprendizagem
+
